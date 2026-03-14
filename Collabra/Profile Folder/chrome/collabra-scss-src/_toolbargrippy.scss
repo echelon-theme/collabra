@@ -1,0 +1,85 @@
+.collapsed-tray-holder {
+    border-block-start: 1px solid ThreeDDarkShadow !important;
+}
+
+toolbargrippy {
+    width: 9px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .toolbargrippy-arrow {
+        height: 7px;
+        list-style-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-arrow.png");
+    }
+
+    .toolbargrippy-texture {
+        height: 100%;
+        background-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-mid.png");
+        background-repeat: repeat-y;
+    }
+
+    .toolbargrippy-end {
+        height: 3px;
+        list-style-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-end.png");
+    }
+
+    &:hover {
+        .toolbargrippy-arrow {
+            list-style-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-arrow-hov.png");
+        }
+
+        .toolbargrippy-texture {
+            background-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-mid-hov.png");
+            background-repeat: repeat-y;
+        }
+
+        .toolbargrippy-end {
+            list-style-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-end-hov.png");
+        }
+    }
+
+    &[tbgrippy-collapsed="true"] {
+        width: 43px;
+        height: 10px;
+        flex-direction: row;
+        background-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-clps.png");
+        margin-inline-end: -10px;
+
+        &:hover {
+            background-position-y: -10px;
+        }
+
+        &.toolbar-primary-grippy {
+            width: 65px;
+            background-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-clps-primary.png");
+        }
+
+        &:first-of-type {
+            width: 39px;
+            background-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-clps-start.png");
+
+            &.toolbar-primary-grippy {
+                width: 63px;
+                background-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-clps-primary-start.png");
+            }
+        }
+
+        .toolbargrippy-arrow,
+        .toolbargrippy-end {
+            list-style-image: none;
+        }
+
+        .toolbargrippy-texture {
+            background-image: none;
+        }
+    }
+
+    &.toolbar-primary-grippy:not([tbgrippy-collapsed="true"]) {
+        margin-inline-end: 9px !important;
+    }
+}
+
+[collabra_collapsed="true"] {
+    visibility: collapse !important;
+}

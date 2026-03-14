@@ -1,0 +1,86 @@
+:root {
+    --toolbarbutton-icon-width: 23px !important;
+    --toolbarbutton-icon-height: 21px !important;
+    --toolbarbutton-icon-small-width: 16px !important;
+    --toolbarbutton-icon-small-height: 16px !important;
+    --toolbarbutton-icon-large-image: url("chrome://collabra/content/images/toolbar/toolbar.png");
+    --toolbarbutton-min-width: 54px !important;
+}
+
+.toolbarbutton-1 {
+    border: 1px solid transparent !important;
+    color: ButtonText !important;
+    min-width: var(--toolbarbutton-min-width);
+    padding: 2px !important;
+    margin-inline: 1px !important;
+
+    #nav-bar & {
+        flex-direction: column !important;
+    }
+
+    &:not([disabled="true"]) {
+        &:hover {
+            border-color: #000 !important;
+            box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px 0 ThreeDHighlight !important;
+            color: #0000FF !important;
+
+            &:active {
+                box-shadow: inset 1px 1px 0 ThreeDShadow, inset -1px -1px 0 ThreeDHighlight !important;
+            }
+        }
+    }
+
+    .toolbarbutton-icon,
+    .toolbarbutton-badge-stack {
+        width: var(--toolbarbutton-icon-small-width) !important;
+        height: var(--toolbarbutton-icon-small-height) !important;
+
+        #nav-bar & {
+            width: var(--toolbarbutton-icon-width) !important;
+            height: var(--toolbarbutton-icon-height) !important;
+        }
+
+        padding: 0 !important;
+        border-radius: 0 !important;
+        background-color: transparent !important;
+    }
+
+    .toolbarbutton-text {
+        width: 100%;
+        display: block;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        background-color: transparent !important;
+        min-height: 0 !important;
+        padding-inline: 2px !important;
+
+        #nav-bar & {
+            padding-block-start: 2px !important;
+            padding-inline: 0 !important;
+        }
+    }
+
+    &[disabled="true"] {
+        color: ThreeDShadow !important;
+        text-shadow: 1px 1px 0 ThreeDHighlight !important;
+        opacity: 1 !important;
+    }
+
+    .toolbarbutton-animatable-box {
+        visibility: collapse !important;
+    }
+}
+
+#PanelUI-button {
+    margin-inline-end: -1px !important;
+
+    #PanelUI-menu-button {
+        list-style-image: none !important;
+        padding: 0 !important;
+        max-width: 1px !important;
+        min-width: 1px !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        margin-inline-end: -1px !important;
+    }
+}

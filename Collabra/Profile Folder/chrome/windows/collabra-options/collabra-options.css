@@ -1,0 +1,26 @@
+#header {
+  padding: 6px;
+  background-image: linear-gradient(to right, ThreeDShadow, -moz-Dialog);
+}
+#header .dialogheader-title {
+  font-weight: bold;
+}
+#header .dialogheader-title,
+#header .dialogheader-desc {
+  margin: 0;
+}
+
+.container {
+  width: 100% !important;
+}
+
+#optionsTree {
+  width: 144px;
+  height: 300px;
+}
+
+groupbox {
+  border: 1px solid ThreeDShadow !important;
+}
+
+/*# sourceMappingURL=collabra-options.css.map */

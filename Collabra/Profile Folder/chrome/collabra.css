@@ -1,0 +1,964 @@
+:root {
+  background-color: -moz-Dialog !important;
+  color: -moz-DialogText !important;
+}
+:root #navigator-toolbox {
+  background-color: inherit !important;
+  color: inherit !important;
+  border-bottom: 0 !important;
+  z-index: unset !important;
+}
+:root #navigator-toolbox .toolbar-internal-box {
+  border-block-start: 1px solid ThreeDShadow !important;
+}
+:root #navigator-toolbox .toolbar-internal-box .browser-toolbar {
+  background-color: inherit !important;
+  color: inherit !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+:root #navigator-toolbox .toolbar-internal-box .browser-toolbar:not(#toolbar-menubar, #notifications-toolbar) {
+  border-block-start: 1px solid ThreeDHighlight !important;
+}
+:root #navigator-toolbox .toolbar-internal-box .browser-toolbar:not(:last-of-type, #notifications-toolbar) {
+  border-block-end: 1px solid ThreeDShadow !important;
+}
+:root:not([inFullscreen]) .browserStack {
+  box-shadow: inset -1px -1px 0 ThreeDHighlight, inset 1px 1px 0 ThreeDShadow, inset -2px -2px 0 ThreeDFace, inset 2px 2px 0 ThreeDDarkShadow !important;
+  padding: 2px !important;
+}
+:root toolbarspring,
+:root toolbarpaletteitem[place=toolbar][id^=wrapper-customizableui-special-spring] {
+  max-width: 100% !important;
+}
+
+treechildren::-moz-tree-row {
+  outline: 0 !important;
+  background-color: transparent !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+treechildren::-moz-tree-line {
+  visibility: visible !important;
+}
+treechildren::-moz-tree-cell {
+  padding: 0 !important;
+}
+treechildren::-moz-tree-cell-text {
+  padding: 2px !important;
+}
+treechildren::-moz-tree-cell-text(selected, focus) {
+  background-color: Highlight !important;
+}
+
+#back-button .toolbarbutton-icon {
+  list-style-image: none !important;
+  background-image: var(--toolbarbutton-icon-large-image);
+  background-position-x: calc(var(--toolbarbutton-icon-width) * -0) !important;
+}
+#back-button:not([disabled=true]):hover .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -2) !important;
+}
+#back-button:not([disabled=true]):hover:active .toolbarbutton-icon, #back-button:not([disabled=true])[open=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -3) !important;
+}
+#back-button[disabled=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -1) !important;
+}
+
+#forward-button .toolbarbutton-icon {
+  list-style-image: none !important;
+  background-image: var(--toolbarbutton-icon-large-image);
+  background-position-x: calc(var(--toolbarbutton-icon-width) * -1) !important;
+}
+#forward-button:not([disabled=true]):hover .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -2) !important;
+}
+#forward-button:not([disabled=true]):hover:active .toolbarbutton-icon, #forward-button:not([disabled=true])[open=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -3) !important;
+}
+#forward-button[disabled=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -1) !important;
+}
+
+#reload-button .toolbarbutton-icon {
+  list-style-image: none !important;
+  background-image: var(--toolbarbutton-icon-large-image);
+  background-position-x: calc(var(--toolbarbutton-icon-width) * -2) !important;
+}
+#reload-button:not([disabled=true]):hover .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -2) !important;
+}
+#reload-button:not([disabled=true]):hover:active .toolbarbutton-icon, #reload-button:not([disabled=true])[open=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -3) !important;
+}
+#reload-button[disabled=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -1) !important;
+}
+
+#home-button .toolbarbutton-icon {
+  list-style-image: none !important;
+  background-image: var(--toolbarbutton-icon-large-image);
+  background-position-x: calc(var(--toolbarbutton-icon-width) * -3) !important;
+}
+#home-button:not([disabled=true]):hover .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -2) !important;
+}
+#home-button:not([disabled=true]):hover:active .toolbarbutton-icon, #home-button:not([disabled=true])[open=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -3) !important;
+}
+#home-button[disabled=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -1) !important;
+}
+
+#search-button .toolbarbutton-icon {
+  list-style-image: none !important;
+  background-image: var(--toolbarbutton-icon-large-image);
+  background-position-x: calc(var(--toolbarbutton-icon-width) * -4) !important;
+}
+#search-button:not([disabled=true]):hover .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -2) !important;
+}
+#search-button:not([disabled=true]):hover:active .toolbarbutton-icon, #search-button:not([disabled=true])[open=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -3) !important;
+}
+#search-button[disabled=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -1) !important;
+}
+
+#netscape-button .toolbarbutton-icon {
+  list-style-image: none !important;
+  background-image: var(--toolbarbutton-icon-large-image);
+  background-position-x: calc(var(--toolbarbutton-icon-width) * -6) !important;
+}
+#netscape-button:not([disabled=true]):hover .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -2) !important;
+}
+#netscape-button:not([disabled=true]):hover:active .toolbarbutton-icon, #netscape-button:not([disabled=true])[open=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -3) !important;
+}
+#netscape-button[disabled=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -1) !important;
+}
+
+#print-button .toolbarbutton-icon {
+  list-style-image: none !important;
+  background-image: var(--toolbarbutton-icon-large-image);
+  background-position-x: calc(var(--toolbarbutton-icon-width) * -8) !important;
+}
+#print-button:not([disabled=true]):hover .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -2) !important;
+}
+#print-button:not([disabled=true]):hover:active .toolbarbutton-icon, #print-button:not([disabled=true])[open=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -3) !important;
+}
+#print-button[disabled=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -1) !important;
+}
+
+#security-button .toolbarbutton-icon {
+  list-style-image: none !important;
+  background-image: var(--toolbarbutton-icon-large-image);
+  background-position-x: calc(var(--toolbarbutton-icon-width) * -9) !important;
+}
+#security-button:not([disabled=true]):hover .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -2) !important;
+}
+#security-button:not([disabled=true]):hover:active .toolbarbutton-icon, #security-button:not([disabled=true])[open=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -3) !important;
+}
+#security-button[disabled=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -1) !important;
+}
+
+#security-button[level=high] .toolbarbutton-icon {
+  list-style-image: none !important;
+  background-image: var(--toolbarbutton-icon-large-image);
+  background-position-x: calc(var(--toolbarbutton-icon-width) * -11) !important;
+}
+#security-button[level=high]:not([disabled=true]):hover .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -2) !important;
+}
+#security-button[level=high]:not([disabled=true]):hover:active .toolbarbutton-icon, #security-button[level=high]:not([disabled=true])[open=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -3) !important;
+}
+#security-button[level=high][disabled=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -1) !important;
+}
+
+#shop-button .toolbarbutton-icon {
+  list-style-image: none !important;
+  background-image: var(--toolbarbutton-icon-large-image);
+  background-position-x: calc(var(--toolbarbutton-icon-width) * -12) !important;
+}
+#shop-button:not([disabled=true]):hover .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -2) !important;
+}
+#shop-button:not([disabled=true]):hover:active .toolbarbutton-icon, #shop-button:not([disabled=true])[open=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -3) !important;
+}
+#shop-button[disabled=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -1) !important;
+}
+
+#stop-button .toolbarbutton-icon {
+  list-style-image: none !important;
+  background-image: var(--toolbarbutton-icon-large-image);
+  background-position-x: calc(var(--toolbarbutton-icon-width) * -13) !important;
+}
+#stop-button:not([disabled=true]):hover .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -2) !important;
+}
+#stop-button:not([disabled=true]):hover:active .toolbarbutton-icon, #stop-button:not([disabled=true])[open=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -3) !important;
+}
+#stop-button[disabled=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -1) !important;
+}
+
+#unified-extensions-button .toolbarbutton-icon {
+  list-style-image: none !important;
+  background-image: var(--toolbarbutton-icon-large-image);
+  background-position-x: calc(var(--toolbarbutton-icon-width) * -15) !important;
+}
+#unified-extensions-button:not([disabled=true]):hover .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -2) !important;
+}
+#unified-extensions-button:not([disabled=true]):hover:active .toolbarbutton-icon, #unified-extensions-button:not([disabled=true])[open=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -3) !important;
+}
+#unified-extensions-button[disabled=true] .toolbarbutton-icon {
+  background-position-y: calc(var(--toolbarbutton-icon-height) * -1) !important;
+}
+
+#instant-message-button {
+  list-style-image: url("chrome://collabra/content/images/bookmarks/aim.png") !important;
+}
+
+:root {
+  --toolbarbutton-icon-width: 23px !important;
+  --toolbarbutton-icon-height: 21px !important;
+  --toolbarbutton-icon-small-width: 16px !important;
+  --toolbarbutton-icon-small-height: 16px !important;
+  --toolbarbutton-icon-large-image: url("chrome://collabra/content/images/toolbar/toolbar.png");
+  --toolbarbutton-min-width: 54px !important;
+}
+
+.toolbarbutton-1 {
+  border: 1px solid transparent !important;
+  color: ButtonText !important;
+  min-width: var(--toolbarbutton-min-width);
+  padding: 2px !important;
+  margin-inline: 1px !important;
+}
+#nav-bar .toolbarbutton-1 {
+  flex-direction: column !important;
+}
+.toolbarbutton-1:not([disabled=true]):hover {
+  border-color: #000 !important;
+  box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px 0 ThreeDHighlight !important;
+  color: #0000FF !important;
+}
+.toolbarbutton-1:not([disabled=true]):hover:active {
+  box-shadow: inset 1px 1px 0 ThreeDShadow, inset -1px -1px 0 ThreeDHighlight !important;
+}
+.toolbarbutton-1 .toolbarbutton-icon,
+.toolbarbutton-1 .toolbarbutton-badge-stack {
+  width: var(--toolbarbutton-icon-small-width) !important;
+  height: var(--toolbarbutton-icon-small-height) !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+}
+#nav-bar .toolbarbutton-1 .toolbarbutton-icon,
+#nav-bar .toolbarbutton-1 .toolbarbutton-badge-stack {
+  width: var(--toolbarbutton-icon-width) !important;
+  height: var(--toolbarbutton-icon-height) !important;
+}
+.toolbarbutton-1 .toolbarbutton-text {
+  width: 100%;
+  display: block;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+  min-height: 0 !important;
+  padding-inline: 2px !important;
+}
+#nav-bar .toolbarbutton-1 .toolbarbutton-text {
+  padding-block-start: 2px !important;
+  padding-inline: 0 !important;
+}
+.toolbarbutton-1[disabled=true] {
+  color: ThreeDShadow !important;
+  text-shadow: 1px 1px 0 ThreeDHighlight !important;
+  opacity: 1 !important;
+}
+.toolbarbutton-1 .toolbarbutton-animatable-box {
+  visibility: collapse !important;
+}
+
+#PanelUI-button {
+  margin-inline-end: -1px !important;
+}
+#PanelUI-button #PanelUI-menu-button {
+  list-style-image: none !important;
+  padding: 0 !important;
+  max-width: 1px !important;
+  min-width: 1px !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  margin-inline-end: -1px !important;
+}
+
+.collapsed-tray-holder {
+  border-block-start: 1px solid ThreeDDarkShadow !important;
+}
+
+toolbargrippy {
+  width: 9px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+toolbargrippy .toolbargrippy-arrow {
+  height: 7px;
+  list-style-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-arrow.png");
+}
+toolbargrippy .toolbargrippy-texture {
+  height: 100%;
+  background-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-mid.png");
+  background-repeat: repeat-y;
+}
+toolbargrippy .toolbargrippy-end {
+  height: 3px;
+  list-style-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-end.png");
+}
+toolbargrippy:hover .toolbargrippy-arrow {
+  list-style-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-arrow-hov.png");
+}
+toolbargrippy:hover .toolbargrippy-texture {
+  background-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-mid-hov.png");
+  background-repeat: repeat-y;
+}
+toolbargrippy:hover .toolbargrippy-end {
+  list-style-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-end-hov.png");
+}
+toolbargrippy[tbgrippy-collapsed=true] {
+  width: 43px;
+  height: 10px;
+  flex-direction: row;
+  background-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-clps.png");
+  margin-inline-end: -10px;
+}
+toolbargrippy[tbgrippy-collapsed=true]:hover {
+  background-position-y: -10px;
+}
+toolbargrippy[tbgrippy-collapsed=true].toolbar-primary-grippy {
+  width: 65px;
+  background-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-clps-primary.png");
+}
+toolbargrippy[tbgrippy-collapsed=true]:first-of-type {
+  width: 39px;
+  background-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-clps-start.png");
+}
+toolbargrippy[tbgrippy-collapsed=true]:first-of-type.toolbar-primary-grippy {
+  width: 63px;
+  background-image: url("chrome://collabra/content/images/toolbargrippy/tbgrip-clps-primary-start.png");
+}
+toolbargrippy[tbgrippy-collapsed=true] .toolbargrippy-arrow,
+toolbargrippy[tbgrippy-collapsed=true] .toolbargrippy-end {
+  list-style-image: none;
+}
+toolbargrippy[tbgrippy-collapsed=true] .toolbargrippy-texture {
+  background-image: none;
+}
+toolbargrippy.toolbar-primary-grippy:not([tbgrippy-collapsed=true]) {
+  margin-inline-end: 9px !important;
+}
+
+[collabra_collapsed=true] {
+  visibility: collapse !important;
+}
+
+#navigator-throbber {
+  width: 36px !important;
+  height: 36px !important;
+  padding: 2px !important;
+  background-color: -moz-Dialog !important;
+  box-shadow: inset -1px -1px 0 ThreeDDarkShadow, inset 1px 1px 0 ThreeDHighlight, inset -2px -2px 0 ThreeDShadow, inset 2px 2px 0 ThreeDLightShadow !important;
+  align-self: center !important;
+  list-style-image: url("chrome://collabra/content/images/throbber/throbber.png") !important;
+}
+#navigator-throbber[busy=true] {
+  list-style-image: url("chrome://collabra/content/images/throbber/throbber-busy.png") !important;
+}
+#navigator-throbber:hover:active {
+  box-shadow: inset -1px -1px 0 ThreeDHighlight, inset 1px 1px 0 ThreeDDarkShadow, inset -2px -2px 0 ThreeDLightShadow, inset 2px 2px 0 ThreeDShadow !important;
+}
+
+.toolbarbutton-1#bookmarks-menu-button {
+  padding: 1px !important;
+}
+#LocationToolbar .toolbarbutton-1#bookmarks-menu-button {
+  margin-inline-start: 10px !important;
+}
+.toolbarbutton-1#bookmarks-menu-button .toolbarbutton-icon {
+  width: 32px !important;
+  height: 17px !important;
+  list-style-image: none !important;
+  background-image: url("chrome://collabra/content/images/bookmarks/bookmarks-toolbarbutton.png");
+}
+.toolbarbutton-1#bookmarks-menu-button[disabled=true] .toolbarbutton-icon {
+  background-position-y: -17px !important;
+}
+.toolbarbutton-1#bookmarks-menu-button:not([disabled=true]):hover .toolbarbutton-icon {
+  background-position-y: -34px !important;
+}
+.toolbarbutton-1#bookmarks-menu-button:not([disabled=true]):hover:active .toolbarbutton-icon {
+  background-position-y: -51px !important;
+}
+.toolbarbutton-1#whats-related-button {
+  padding: 1px !important;
+}
+#LocationToolbar .toolbarbutton-1#whats-related-button {
+  margin-inline-start: 2px !important;
+  margin-inline-end: 10px !important;
+}
+.toolbarbutton-1#whats-related-button .toolbarbutton-icon {
+  width: 28px !important;
+  height: 16px !important;
+  list-style-image: none !important;
+  background-image: url("chrome://collabra/content/images/toolbar/whats-related.png");
+}
+.toolbarbutton-1#whats-related-button[disabled=true] .toolbarbutton-icon {
+  background-position-y: -16px !important;
+}
+.toolbarbutton-1#whats-related-button:not([disabled=true]):hover .toolbarbutton-icon {
+  background-position-y: -32px !important;
+}
+.toolbarbutton-1#whats-related-button:not([disabled=true]):hover:active .toolbarbutton-icon {
+  background-position-y: -48px !important;
+}
+
+:root {
+  --urlbar-container-height-root: 21px !important;
+  --autocomplete-popup-highlight-background: Highlight !important;
+  --autocomplete-popup-highlight-color: HighlightText !important;
+  --urlbarView-hover-background: var(--autocomplete-popup-highlight-background) !important;
+}
+
+#urlbar-container {
+  --urlbar-container-height: var(--urlbar-container-height-root) !important;
+  padding-block: 0 !important;
+  margin: 0 !important;
+}
+#urlbar-container #urlbar {
+  z-index: 1 !important;
+  font-size: 1em !important;
+  --urlbar-height: var(--urlbar-container-height-root) !important;
+  --urlbar-min-height: var(--urlbar-container-height-root) !important;
+  width: var(--urlbar-width) !important;
+  margin-left: 0 !important;
+}
+#urlbar-container #urlbar #urlbar-background {
+  height: var(--urlbar-height) !important;
+  animation: none !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+  background-color: Field !important;
+  box-shadow: inset -1px -1px 0 ThreeDHighlight, inset 1px 1px 0 ThreeDShadow, inset -2px -2px 0 ThreeDFace, inset 2px 2px 0 ThreeDDarkShadow !important;
+}
+#urlbar-container #urlbar .urlbar-input-container {
+  border-radius: 0 !important;
+  border: 2px solid transparent !important;
+  padding: 0 !important;
+}
+#urlbar-container #urlbar #urlbar-searchmode-switcher,
+#urlbar-container #urlbar #tracking-protection-icon-container,
+#urlbar-container #urlbar #identity-box {
+  display: none !important;
+}
+#urlbar-container #urlbar .urlbar-page-action {
+  padding: 0 !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+}
+#urlbar-container #urlbar #urlbar-input {
+  padding-inline-start: 1px !important;
+  padding-block-end: 1px !important;
+}
+#urlbar-container #urlbar .urlbarView {
+  width: calc(100% - 41px) !important;
+  margin-inline: 0 !important;
+  margin-inline-start: 23px !important;
+  margin-block-start: -3px !important;
+  background-color: white !important;
+  border: 1px solid black !important;
+}
+#urlbar-container #urlbar .urlbarView .urlbarView-body-inner {
+  width: 100% !important;
+  margin: 0 !important;
+  border: 0 !important;
+}
+#urlbar-container #urlbar .urlbarView .urlbarView-body-inner .urlbarView-results {
+  padding-block: 2px !important;
+}
+#urlbar-container #urlbar .urlbarView .urlbarView-body-inner .urlbarView-results .urlbarView-row {
+  padding-block-start: 1px !important;
+  padding-inline: 5px !important;
+  min-height: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+#urlbar-container #urlbar .urlbarView .urlbarView-body-inner .urlbarView-results .urlbarView-row[row-selectable]:not([selected]):hover {
+  color: var(--autocomplete-popup-highlight-color) !important;
+}
+#urlbar-container #urlbar .urlbarView .urlbarView-body-inner .urlbarView-results .urlbarView-row[label] {
+  margin: 0 !important;
+}
+#urlbar-container #urlbar .urlbarView .urlbarView-body-inner .urlbarView-results .urlbarView-row[label]::before {
+  display: none !important;
+}
+#urlbar-container #urlbar .urlbarView .urlbarView-body-inner .urlbarView-results .urlbarView-row .urlbarView-button, #urlbar-container #urlbar .urlbarView .urlbarView-body-inner .urlbarView-results .urlbarView-row:not([type=search], [has-action=true]) .urlbarView-no-wrap,
+#urlbar-container #urlbar .urlbarView .urlbarView-body-inner .urlbarView-results .urlbarView-row .urlbarView-favicon,
+#urlbar-container #urlbar .urlbarView .urlbarView-body-inner .urlbarView-results .urlbarView-row .urlbarView-type-icon,
+#urlbar-container #urlbar .urlbarView .urlbarView-body-inner .urlbarView-results .urlbarView-row .urlbarView-tail-prefix {
+  visibility: collapse !important;
+}
+#urlbar-container #urlbar .urlbarView .urlbarView-body-inner .urlbarView-results .urlbarView-row .urlbarView-no-wrap {
+  margin-block-end: -1px !important;
+}
+#urlbar-container #urlbar .urlbarView .urlbarView-body-inner .urlbarView-results .urlbarView-row .urlbarView-row-inner {
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+#urlbar-container #urlbar .urlbarView .urlbarView-body-inner .urlbarView-results .urlbarView-row .urlbarView-title-separator::before {
+  content: "-" !important;
+  opacity: 1 !important;
+}
+#urlbar-container #urlbar .urlbarView .urlbarView-body-inner .urlbarView-results .urlbarView-row .urlbarView-url,
+#urlbar-container #urlbar .urlbarView .urlbarView-body-inner .urlbarView-results .urlbarView-row .urlbarView-action {
+  font-size: 1em !important;
+  line-height: inherit !important;
+  color: inherit !important;
+}
+#urlbar-container #urlbar .urlbarView .search-one-offs {
+  display: none !important;
+}
+#urlbar-container #urlbar #page-action-buttons {
+  width: 1px !important;
+  max-height: 1px !important;
+  margin-inline-end: -1px !important;
+  opacity: 0 !important;
+}
+
+#urlbar-input::placeholder,
+.searchbar-textbox::placeholder {
+  color: GrayText !important;
+  opacity: 0 !important;
+}
+
+#tabbrowser-tabbox {
+  z-index: 0 !important;
+}
+
+#link-button {
+  padding-inline-start: 8px !important;
+  padding-inline-end: 2px !important;
+  align-items: center !important;
+}
+#link-button .link-draggable-icon-container {
+  margin-inline-end: 5px !important;
+}
+#link-button .link-draggable-icon-container .link-drag-icon {
+  width: 16px !important;
+  height: 16px !important;
+  cursor: pointer !important;
+  background-image: url("chrome://collabra/content/images/toolbar/draggable-link.png") !important;
+}
+#link-button .link-draggable-icon-container:hover .link-drag-icon {
+  background-position-x: -16px !important;
+}
+#link-button .urlbar-label {
+  text-align: right !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+}
+
+toolbarbutton.bookmark-item:not(.subviewbutton) {
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  background-color: -moz-Dialog !important;
+  color: ButtonText !important;
+  min-width: var(--toolbarbutton-min-width);
+  padding: 0px 3px 3px 3px !important;
+  margin: 0 1px !important;
+  min-height: 21px !important;
+}
+toolbarbutton.bookmark-item:not(.subviewbutton):not([disabled=true]):hover:not([open=true]) {
+  border-color: #000 !important;
+  box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px 0 ThreeDHighlight !important;
+  color: #0000FF !important;
+}
+toolbarbutton.bookmark-item:not(.subviewbutton):not([disabled=true]):hover:not([open=true]):active {
+  box-shadow: inset 1px 1px 0 ThreeDShadow, inset -1px -1px 0 ThreeDHighlight !important;
+}
+toolbarbutton.bookmark-item:not(.subviewbutton) .toolbarbutton-icon {
+  margin-inline-end: 7px !important;
+}
+toolbarbutton.bookmark-item:not(.subviewbutton) .toolbarbutton-text {
+  padding: 0 !important;
+  padding-block-start: 3px !important;
+  margin: 0 !important;
+}
+toolbarbutton.bookmark-item:not(.subviewbutton)[disabled=true] {
+  color: ThreeDShadow !important;
+  text-shadow: 1px 1px 0 ThreeDHighlight !important;
+  opacity: 1 !important;
+}
+
+#PersonalToolbar toolbargrippy {
+  margin-inline-end: 9px !important;
+}
+#PersonalToolbar .toolbarbutton-1 {
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  background-color: -moz-Dialog !important;
+  color: ButtonText !important;
+  min-width: var(--toolbarbutton-min-width);
+  padding: 1px 2px 2px 2px !important;
+  margin: 0 1px !important;
+  min-height: 21px !important;
+}
+#PersonalToolbar .toolbarbutton-1:not([disabled=true]):hover {
+  border-color: #000 !important;
+  box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px 0 ThreeDHighlight !important;
+  color: #0000FF !important;
+}
+#PersonalToolbar .toolbarbutton-1:not([disabled=true]):hover:active {
+  box-shadow: inset 1px 1px 0 ThreeDShadow, inset -1px -1px 0 ThreeDHighlight !important;
+}
+#PersonalToolbar .toolbarbutton-1 .toolbarbutton-icon {
+  margin-inline-end: 2px !important;
+}
+#PersonalToolbar .toolbarbutton-1 .toolbarbutton-text {
+  padding: 0 !important;
+  padding-block-start: 3px !important;
+  margin: 0 !important;
+}
+#PersonalToolbar .toolbarbutton-1[disabled=true] {
+  color: ThreeDShadow !important;
+  text-shadow: 1px 1px 0 ThreeDHighlight !important;
+  opacity: 1 !important;
+}
+
+#PlacesToolbarItems .bookmark-item:not([container]) {
+  list-style-image: url("chrome://collabra/content/images/bookmarks/bookmark-item.png") !important;
+}
+
+.bookmark-item[container] {
+  list-style-image: url("chrome://collabra/content/images/bookmarks/bookmarks-folder.png") !important;
+}
+
+:root {
+  --tab-min-height: 25px !important;
+  --tabstrip-min-height: 25px !important;
+  --tab-icon-end-margin: 4px !important;
+}
+
+#TabsToolbar {
+  background-color: -moz-Dialog !important;
+  padding-block-end: 3px !important;
+  border-block-start: 1px solid ThreeDShadow !important;
+}
+#TabsToolbar .toolbar-items {
+  border-block-start: 1px solid ThreeDDarkShadow !important;
+  padding-block-start: 1px !important;
+  box-shadow: inset 0 -1px 0 ThreeDHighlight, inset 0 -2px 0 ThreeDLightShadow !important;
+}
+#TabsToolbar .toolbar-items #tabbrowser-tabs {
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#TabsToolbar .tabbrowser-tab {
+  padding: 0 !important;
+}
+#TabsToolbar .tabbrowser-tab .tab-background {
+  min-height: 0 !important;
+  border-radius: 0 !important;
+  margin-block: 0 !important;
+  margin-block-start: 2px !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background-color: -moz-Dialog !important;
+  box-shadow: inset 0 -1px 0 ThreeDHighlight, inset -1px 0 0 ThreeDDarkShadow, inset 1px 1px 0 ThreeDHighlight, inset -2px 0 0 ThreeDShadow, inset 2px 2px 0 ThreeDLightShadow !important;
+  position: relative !important;
+}
+#TabsToolbar .tabbrowser-tab .tab-background:is([selected], [multiselected]) {
+  margin-block-start: 0 !important;
+  box-shadow: inset 1px 0 0 ThreeDHighlight, inset 0 -1px 0 ThreeDFace, inset -1px 0 0 ThreeDDarkShadow, inset 1px 1px 0 ThreeDHighlight, inset -2px 0 ThreeDShadow, inset 2px 2px 0 ThreeDLightShadow !important;
+}
+#TabsToolbar .tabbrowser-tab .tab-background::before, #TabsToolbar .tabbrowser-tab .tab-background::after {
+  content: "";
+  display: flex;
+  width: 2px;
+  height: 2px;
+  position: absolute;
+}
+#TabsToolbar .tabbrowser-tab .tab-background::before {
+  box-shadow: inset 1px 1px 0 ThreeDFace !important;
+  background-color: ThreeDHighlight !important;
+  left: 0 !important;
+  top: 0 !important;
+}
+#TabsToolbar .tabbrowser-tab .tab-background::after {
+  box-shadow: inset -1px 1px 0 ThreeDFace !important;
+  background-color: ThreeDDarkShadow !important;
+  right: 0 !important;
+  top: 0 !important;
+}
+#TabsToolbar .tabbrowser-tab .tab-background .tab-loading-burst,
+#TabsToolbar .tabbrowser-tab .tab-background .tab-context-line {
+  display: none !important;
+}
+#TabsToolbar .tabbrowser-tab:has(+ .tabbrowser-tab[visuallyselected]) .tab-background {
+  box-shadow: inset 0 -1px 0 ThreeDHighlight, inset 1px 1px 0 ThreeDHighlight, inset 2px 2px 0 ThreeDLightShadow !important;
+}
+#TabsToolbar .tabbrowser-tab:has(+ .tabbrowser-tab[visuallyselected]) .tab-background::after {
+  display: none !important;
+}
+#TabsToolbar .tabbrowser-tab[visuallyselected] + .tabbrowser-tab .tab-background {
+  box-shadow: inset 0 -1px 0 ThreeDHighlight, inset -1px 0 0 ThreeDDarkShadow, inset 0 1px 0 ThreeDHighlight, inset -2px 0 0 ThreeDShadow, inset 0 2px 0 ThreeDLightShadow !important;
+}
+#TabsToolbar .tabbrowser-tab[visuallyselected] + .tabbrowser-tab .tab-background::before {
+  display: none !important;
+}
+#TabsToolbar .tabbrowser-tab .tab-content {
+  padding: 0 6px !important;
+  padding-block-start: 2px !important;
+}
+#TabsToolbar .tabbrowser-tab .tab-content[selected] {
+  padding: 0 8px !important;
+  padding-block-start: 0 !important;
+}
+#TabsToolbar .tabbrowser-tab .tab-content .tab-label-container {
+  mask-image: none !important;
+  height: unset !important;
+}
+#TabsToolbar .tabbrowser-tab .tab-content .tab-label-container .tab-label {
+  width: 100% !important;
+  text-overflow: ellipsis !important;
+  overflow: hidden;
+}
+#TabsToolbar .tabbrowser-tab .tab-content .tab-close-button {
+  display: none !important;
+}
+#TabsToolbar #tabs-newtab-button,
+#TabsToolbar #new-tab-button {
+  --toolbarbutton-min-width: 32px !important;
+  --toolbarbutton-icon-small-width: 22px !important;
+  --toolbarbutton-icon-small-height: 17px !important;
+  list-style-image: url("chrome://collabra/content/images/tabbar/tab-new.png") !important;
+}
+#TabsToolbar #tabs-newtab-button .toolbarbutton-text,
+#TabsToolbar #new-tab-button .toolbarbutton-text {
+  display: none !important;
+}
+
+#tabbrowser-tabbox {
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+.tabs-closebutton {
+  padding: 5px !important;
+  list-style-image: url("chrome://collabra/content/images/glyphs/close.svg") !important;
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  background-color: -moz-Dialog !important;
+  color: ButtonText !important;
+  margin-inline: 3px !important;
+}
+.tabs-closebutton:not([disabled=true]):hover {
+  border-color: #000 !important;
+  box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px 0 ThreeDHighlight !important;
+}
+.tabs-closebutton:not([disabled=true]):hover:active {
+  box-shadow: inset 1px 1px 0 ThreeDShadow, inset -1px -1px 0 ThreeDHighlight !important;
+}
+.tabs-closebutton .toolbarbutton-icon {
+  width: 8px !important;
+  height: 7px !important;
+}
+
+#alltabs-button {
+  --toolbarbutton-icon-small-width: 7px !important;
+  --toolbarbutton-icon-small-height: 8px !important;
+  --toolbarbutton-min-width: 0 !important;
+  width: 20px !important;
+  max-height: 19px !important;
+  list-style-image: url("chrome://collabra/content/images/glyphs/arrow.svg") !important;
+  fill: ButtonText !important;
+  padding: 0 !important;
+  align-self: center;
+}
+#alltabs-button .toolbarbutton-text {
+  display: none !important;
+}
+
+dropmarker {
+  width: 16px !important;
+  appearance: none !important;
+  background-color: -moz-Dialog !important;
+  box-shadow: inset -1px -1px 0 ThreeDDarkShadow, inset 1px 1px 0 ThreeDLightShadow, inset -2px -2px 0 ThreeDShadow, inset 2px 2px 0 ThreeDHighlight !important;
+  background-image: url("chrome://collabra/content/images/glyphs/arrow.svg") !important;
+  background-position: center center !important;
+  background-repeat: no-repeat;
+  background-size: 7px 8px !important;
+}
+
+#status-bar {
+  background-color: -moz-Dialog !important;
+  padding-block-start: 2px !important;
+}
+:root[inFullscreen] #status-bar {
+  display: none !important;
+}
+#status-bar statusbarpanel {
+  min-height: 16px !important;
+  align-items: center !important;
+  padding: 1px !important;
+  box-shadow: inset -1px -1px 0 ThreeDHighlight, inset 1px 1px 0 ThreeDShadow !important;
+}
+#status-bar statusbarpanel:not(:last-of-type) {
+  margin-inline-end: 2px !important;
+}
+#status-bar #component-bar {
+  padding: 0 5px 0 1px !important;
+  box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px 0 ThreeDHighlight !important;
+}
+#status-bar #component-bar .taskbutton {
+  width: 33px !important;
+  height: 100% !important;
+  padding: 0 !important;
+  border: 1px solid transparent !important;
+  color: ButtonText !important;
+  margin: 1px !important;
+}
+#status-bar #component-bar .taskbutton:not([disabled=true]):hover {
+  border-color: #000 !important;
+  box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px 0 ThreeDHighlight !important;
+  color: #0000FF !important;
+}
+#status-bar #component-bar .taskbutton:not([disabled=true]):hover:active {
+  box-shadow: inset 1px 1px 0 ThreeDShadow, inset -1px -1px 0 ThreeDHighlight !important;
+}
+#status-bar #component-bar .taskbutton .toolbarbutton-text {
+  display: none !important;
+}
+#status-bar #component-bar .taskbutton .toolbarbutton-icon {
+  width: 25px;
+  height: 12px;
+  background-image: url("chrome://collabra/content/images/statusbar/components-bar.png");
+}
+#status-bar #component-bar .taskbutton:not([disabled=true]):hover .toolbarbutton-icon {
+  background-position-y: -24px !important;
+}
+#status-bar #component-bar .taskbutton:not([disabled=true]):hover:active .toolbarbutton-icon {
+  background-position-y: -36px !important;
+}
+#status-bar #component-bar .taskbutton[disabled=true] .toolbarbutton-icon {
+  background-position: -12px !important;
+}
+#status-bar #component-bar #mini-nav .toolbarbutton-icon {
+  background-position-x: 0 !important;
+}
+#status-bar #component-bar #mini-mail .toolbarbutton-icon {
+  background-position-x: -25px !important;
+}
+#status-bar #component-bar #mini-news .toolbarbutton-icon {
+  background-position-x: -100px !important;
+}
+#status-bar #component-bar #mini-addr .toolbarbutton-icon {
+  background-position-x: -150px !important;
+}
+#status-bar #component-bar #mini-comp .toolbarbutton-icon {
+  background-position-x: -125px !important;
+}
+#status-bar #component-bar .component-bar-grippy {
+  -moz-context-properties: fill, stroke;
+  list-style-image: url("chrome://collabra/content/images/statusbar/components-grippy.svg") !important;
+  border-inline-end: 1px solid ThreeDShadow !important;
+  fill: ThreeDShadow !important;
+  stroke: ThreeDHighlight !important;
+}
+#status-bar #statuspanel {
+  display: flex !important;
+  position: static !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  align-items: center !important;
+}
+#status-bar #statuspanel #statuspanel-label {
+  margin: 0 !important;
+  border: 0 !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+  color: ButtonText !important;
+}
+#status-bar #statuspanel[inactive] #statuspanel-label {
+  opacity: 0 !important;
+}
+#status-bar #statusbar-progress {
+  width: 96px !important;
+  padding-inline: 5px !important;
+  padding-block: 2px !important;
+}
+#status-bar #statusbar-progress .statusbarpanel-progress-container {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+#status-bar #statusbar-progress .statusbarpanel-progress-bar {
+  height: 100% !important;
+  width: 43px !important;
+  background-image: linear-gradient(to right, -moz-Dialog, ThreeDShadow) !important;
+  visibility: hidden !important;
+}
+#status-bar #statusbar-progress[busy=true] .statusbarpanel-progress-bar {
+  animation: progress-bar-slide 2s steps(15) infinite !important;
+  visibility: visible !important;
+}
+#status-bar #statusbar-progress[busy=true][flipped=true] .statusbarpanel-progress-container {
+  transform: scaleX(-1) !important;
+}
+#status-bar #offline-status {
+  list-style-image: url("chrome://collabra/content/images/statusbar/online.png");
+}
+#status-bar #offline-status[offline] {
+  list-style-image: url("chrome://collabra/content/images/statusbar/offline.png");
+}
+#status-bar #security-button {
+  list-style-image: url("chrome://collabra/content/images/statusbar/lock-insecure.png");
+}
+#status-bar #security-button[level=high] {
+  list-style-image: url("chrome://collabra/content/images/statusbar/lock-secure.png");
+}
+
+@keyframes progress-bar-slide {
+  from {
+    transform: translateX(-43px);
+  }
+  to {
+    transform: translateX(43px);
+  }
+}
+
+/*# sourceMappingURL=collabra.css.map */

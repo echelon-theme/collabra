@@ -1,0 +1,10 @@
+dropmarker {
+    width: 16px !important;
+    appearance: none !important;
+    background-color: -moz-Dialog !important;
+    box-shadow: inset -1px -1px 0 ThreeDDarkShadow, inset 1px 1px 0 ThreeDLightShadow, inset -2px -2px 0 ThreeDShadow, inset 2px 2px 0 ThreeDHighlight !important;
+    background-image: url("chrome://collabra/content/images/glyphs/arrow.svg") !important;
+    background-position: center center !important;
+    background-repeat: no-repeat;
+    background-size: 7px 8px !important;
+}

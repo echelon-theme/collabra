@@ -1,0 +1,24 @@
+treechildren {
+    &::-moz-tree-row {
+        outline: 0 !important;
+        background-color: transparent !important;
+        min-height: 0 !important;
+        padding: 0 !important;
+    }
+
+    &::-moz-tree-line {
+        visibility: visible !important;
+    }
+
+    &::-moz-tree-cell {
+        padding: 0 !important;
+    }
+
+    &::-moz-tree-cell-text {
+        padding: 2px !important;
+    }
+
+    &::-moz-tree-cell-text(selected, focus) {
+        background-color: Highlight !important;
+    }
+}

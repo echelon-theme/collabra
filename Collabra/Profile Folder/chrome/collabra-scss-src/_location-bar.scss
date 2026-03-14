@@ -1,0 +1,72 @@
+.toolbarbutton-1 { 
+    &#bookmarks-menu-button {
+        padding: 1px !important;
+
+        #LocationToolbar & {
+            margin-inline-start: 10px !important;
+        }
+
+        .toolbarbutton-icon {
+            width: 32px !important;
+            height: 17px !important;
+            list-style-image: none !important;
+            background-image: url("chrome://collabra/content/images/bookmarks/bookmarks-toolbarbutton.png");
+        }
+
+        &[disabled="true"] {
+            .toolbarbutton-icon {
+                background-position-y: -17px !important;
+            }
+        }
+
+        &:not([disabled="true"]) {
+            &:hover {
+                .toolbarbutton-icon {
+                    background-position-y: -34px !important;
+                }
+
+                &:active {
+                    .toolbarbutton-icon {
+                        background-position-y: -51px !important;
+                    }
+                }
+            }
+        }
+    }
+
+    &#whats-related-button {
+        padding: 1px !important;
+
+        #LocationToolbar & {
+            margin-inline-start: 2px !important;
+            margin-inline-end: 10px !important;
+        }
+
+        .toolbarbutton-icon {
+            width: 28px !important;
+            height: 16px !important;
+            list-style-image: none !important;
+            background-image: url("chrome://collabra/content/images/toolbar/whats-related.png");
+        }
+
+        &[disabled="true"] {
+            .toolbarbutton-icon {
+                background-position-y: -16px !important;
+            }
+        }
+
+        &:not([disabled="true"]) {
+            &:hover {
+                .toolbarbutton-icon {
+                    background-position-y: -32px !important;
+                }
+
+                &:active {
+                    .toolbarbutton-icon {
+                        background-position-y: -48px !important;
+                    }
+                }
+            }
+        }
+    }
+}

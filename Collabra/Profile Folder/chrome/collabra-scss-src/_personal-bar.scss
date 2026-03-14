@@ -1,0 +1,93 @@
+toolbarbutton.bookmark-item:not(.subviewbutton) {
+    border: 1px solid transparent !important;
+    border-radius: 0 !important;
+    background-color: -moz-Dialog !important;
+    color: ButtonText !important;
+    min-width: var(--toolbarbutton-min-width);
+    padding: 0px 3px 3px 3px !important;
+    margin: 0 1px !important;
+    min-height: 21px !important;
+
+    &:not([disabled="true"]) {
+        &:hover:not([open="true"]) {
+            border-color: #000 !important;
+            box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px 0 ThreeDHighlight !important;
+            color: #0000FF !important;
+
+            &:active {
+                box-shadow: inset 1px 1px 0 ThreeDShadow, inset -1px -1px 0 ThreeDHighlight !important;
+            }
+        }
+    }
+
+    .toolbarbutton-icon {
+        margin-inline-end: 7px !important;
+    }
+
+    .toolbarbutton-text {
+        padding: 0 !important;
+        padding-block-start: 3px !important;
+        margin: 0 !important;
+    }
+
+    &[disabled="true"] {
+        color: ThreeDShadow !important;
+        text-shadow: 1px 1px 0 ThreeDHighlight !important;
+        opacity: 1 !important;
+    }
+}
+
+#PersonalToolbar {
+    toolbargrippy {
+        margin-inline-end: 9px !important;
+    }
+
+    .toolbarbutton-1 {
+        border: 1px solid transparent !important;
+        border-radius: 0 !important;
+        background-color: -moz-Dialog !important;
+        color: ButtonText !important;
+        min-width: var(--toolbarbutton-min-width);
+        padding: 1px 2px 2px 2px !important;
+        margin: 0 1px !important;
+        min-height: 21px !important;
+
+        &:not([disabled="true"]) {
+            &:hover {
+                border-color: #000 !important;
+                box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px 0 ThreeDHighlight !important;
+                color: #0000FF !important;
+
+                &:active {
+                    box-shadow: inset 1px 1px 0 ThreeDShadow, inset -1px -1px 0 ThreeDHighlight !important;
+                }
+            }
+        }
+
+        .toolbarbutton-icon {
+            margin-inline-end: 2px !important;
+        }
+
+        .toolbarbutton-text {
+            padding: 0 !important;
+            padding-block-start: 3px !important;
+            margin: 0 !important;
+        }
+
+        &[disabled="true"] {
+            color: ThreeDShadow !important;
+            text-shadow: 1px 1px 0 ThreeDHighlight !important;
+            opacity: 1 !important;
+        }
+    }
+}
+
+#PlacesToolbarItems .bookmark-item:not([container]) {
+    list-style-image: url("chrome://collabra/content/images/bookmarks/bookmark-item.png") !important;
+}
+
+.bookmark-item {
+    &[container] {
+        list-style-image: url("chrome://collabra/content/images/bookmarks/bookmarks-folder.png") !important;
+    }
+}

@@ -1,0 +1,65 @@
+:root {
+    background-color: -moz-Dialog !important;
+    color: -moz-DialogText !important;
+
+    #navigator-toolbox {
+        background-color: inherit !important;
+        color: inherit !important;
+        border-bottom: 0 !important;
+        z-index: unset !important;
+        
+        .toolbar-internal-box {
+            border-block-start: 1px solid ThreeDShadow !important;
+
+            .browser-toolbar {
+                background-color: inherit !important;
+                color: inherit !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+
+                &:not(#toolbar-menubar, #notifications-toolbar) {
+                    border-block-start: 1px solid ThreeDHighlight !important;
+                }
+
+                &:not(:last-of-type, #notifications-toolbar) {
+                    border-block-end: 1px solid ThreeDShadow !important;
+                }
+            }
+        }
+    }
+
+    &:not([inFullscreen]) .browserStack {
+        box-shadow: inset -1px -1px 0 ThreeDHighlight, inset 1px 1px 0 ThreeDShadow, inset -2px -2px 0 ThreeDFace, inset 2px 2px 0 ThreeDDarkShadow !important;
+        padding: 2px !important;
+    }
+
+    toolbarspring,
+    toolbarpaletteitem[place="toolbar"][id^="wrapper-customizableui-special-spring"] {
+        max-width: 100% !important;    
+    }
+}
+
+treechildren {
+    &::-moz-tree-row {
+        outline: 0 !important;
+        background-color: transparent !important;
+        min-height: 0 !important;
+        padding: 0 !important;
+    }
+
+    &::-moz-tree-line {
+        visibility: visible !important;
+    }
+
+    &::-moz-tree-cell {
+        padding: 0 !important;
+    }
+
+    &::-moz-tree-cell-text {
+        padding: 2px !important;
+    }
+
+    &::-moz-tree-cell-text(selected, focus) {
+        background-color: Highlight !important;
+    }
+}

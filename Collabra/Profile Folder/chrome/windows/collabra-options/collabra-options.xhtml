@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://global/content/xul.css" type="text/css"?>
+
+<?xml-stylesheet href="chrome://userchrome/content/windows/collabra-options/collabra-options.css" type="text/css"?>
+
+<dialog xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        id="collabraOptions"
+        windowtype="Browser:CollabraOptions"
+        buttons="accept, cancel, help"
+        title="PLACEHJOLDER">
+
+    <hbox class="container" flex="1">
+        <!-- <tree id="optionsTree" hidecolumnpicker="true" hidevscroll="true">
+            <treecols>
+                <treecol id="title" hideheader="true" primary="true" flex="1"/>
+            </treecols>
+            <treechildren class="optionsTreeChildren" flex="1" />
+        </tree> -->
+
+        <vbox class="options-container" flex="1">
+            <dialogheader id="header" title="PLACEHJOLDER">
+                <label class="dialogheader-title" crop="right" flex="1" value="PLACEHJOLDER" />
+                <label class="dialogheader-desc" crop="right" value="DESCRIPTIOn" />
+            </dialogheader>
+            <groupbox>
+                <label value="Show toolbars as" />
+            </groupbox>
+        </vbox>
+    </hbox>
+
+    <script src="chrome://userchrome/content/windows/collabra-options/collabra-options.js" type="text/javascript"></script>
+
+</dialog>

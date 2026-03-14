@@ -1,0 +1,60 @@
+@use "sass:list";
+@use "sass:string";
+
+@mixin toolbar-icons($map) {
+    @each $id, $position in $map {
+        @include toolbar-icon($id, $position);
+    }
+}
+
+@mixin toolbar-icon($toolbar-ids, $icon-position) {
+    $selector: "##{list.nth($toolbar-ids, 1)}";
+
+    #{$selector} {
+        .toolbarbutton-icon {
+            list-style-image: none !important;
+            background-image: var(--toolbarbutton-icon-large-image);
+            background-position-x: calc(var(--toolbarbutton-icon-width) * -#{$icon-position}) !important;
+        }
+
+        &:not([disabled="true"]) {
+            &:hover {
+                .toolbarbutton-icon {
+                    background-position-y: calc(var(--toolbarbutton-icon-height) * -2) !important;
+                }
+            }
+
+            &:hover:active,
+            &[open="true"] {
+                .toolbarbutton-icon {
+                    background-position-y: calc(var(--toolbarbutton-icon-height) * -3) !important;
+                }
+            }
+        }
+
+        &[disabled="true"] {
+            .toolbarbutton-icon {
+                background-position-y: calc(var(--toolbarbutton-icon-height) * -1) !important;
+            }
+        }
+    }
+}
+
+@include toolbar-icons((
+    ("back-button"): 0,
+    ("forward-button"): 1,
+    ("reload-button"): 2,
+    ("home-button"): 3,
+    ("search-button"): 4,
+    ("netscape-button"): 6,
+    ("print-button"): 8,
+    ("security-button"): 9,
+    ("security-button[level='high']"): 11,
+    ("shop-button"): 12,
+    ("stop-button"): 13,
+    ("unified-extensions-button"): 15
+));
+
+#instant-message-button {
+    list-style-image: url("chrome://collabra/content/images/bookmarks/aim.png") !important;
+}

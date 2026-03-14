@@ -1,0 +1,185 @@
+#status-bar {
+    background-color: -moz-Dialog !important;
+    padding-block-start: 2px !important;
+
+    :root[inFullscreen] & {
+        display: none !important;
+    }
+
+    statusbarpanel { 
+        min-height: 16px !important;
+        align-items: center !important;
+        padding: 1px !important;
+        box-shadow: inset -1px -1px 0 ThreeDHighlight, inset 1px 1px 0 ThreeDShadow !important;
+
+        &:not(:last-of-type) {
+            margin-inline-end: 2px !important;
+        }
+    }
+
+    #component-bar {
+        padding: 0 5px 0 1px !important;
+        box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px 0 ThreeDHighlight !important;
+
+        .taskbutton {
+            width: 33px !important; 
+            height: 100% !important;
+            padding: 0 !important;
+            border: 1px solid transparent !important;
+            color: ButtonText !important;
+            margin: 1px !important;
+
+            &:not([disabled="true"]) {
+                &:hover {
+                    border-color: #000 !important;
+                    box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px 0 ThreeDHighlight !important;
+                    color: #0000FF !important;
+
+                    &:active {
+                        box-shadow: inset 1px 1px 0 ThreeDShadow, inset -1px -1px 0 ThreeDHighlight !important;
+                    }
+                }
+            }
+
+            .toolbarbutton-text {
+                display: none !important;
+            }
+
+            .toolbarbutton-icon {
+                width: 25px;
+                height: 12px;
+                background-image: url("chrome://collabra/content/images/statusbar/components-bar.png");
+            }
+
+            &:not([disabled="true"]) {
+                &:hover {
+                    .toolbarbutton-icon {
+                        background-position-y: -24px !important;
+                    }
+
+                    &:active {
+                        .toolbarbutton-icon {
+                            background-position-y: -36px !important;
+                        }
+                    }
+                }
+            }
+
+            &[disabled="true"] {
+                .toolbarbutton-icon {
+                    background-position: -12px !important;
+                }
+            }
+        }
+
+        #mini-nav .toolbarbutton-icon {
+            background-position-x: 0 !important;
+        }
+
+        #mini-mail .toolbarbutton-icon {
+            background-position-x: -25px !important;
+        }
+
+        #mini-news .toolbarbutton-icon {
+            background-position-x: -100px !important;
+        }
+
+        #mini-addr .toolbarbutton-icon {
+            background-position-x: -150px !important;
+        }
+
+        #mini-comp .toolbarbutton-icon {
+            background-position-x: -125px !important;
+        }
+
+        .component-bar-grippy {
+            -moz-context-properties: fill, stroke;
+            list-style-image: url("chrome://collabra/content/images/statusbar/components-grippy.svg") !important;
+            border-inline-end: 1px solid ThreeDShadow !important;
+            fill: ThreeDShadow !important;
+            stroke: ThreeDHighlight !important;
+        }
+    }
+
+    #statuspanel {
+        display: flex !important;
+        position: static !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        align-items: center !important;
+
+        #statuspanel-label {
+            margin: 0 !important;
+            border: 0 !important;
+            padding: 0 !important;
+            background-color: transparent !important;
+            color: ButtonText !important;
+        }
+
+        &[inactive] {
+            #statuspanel-label {
+                opacity: 0 !important;
+            }
+        }
+    }
+
+    #statusbar-progress {
+        width: 96px !important;
+        padding-inline: 5px !important;
+        padding-block: 2px !important;
+
+        .statusbarpanel-progress-container {
+            width: 100% !important;
+            height: 100% !important;
+            overflow: hidden !important;
+        }
+
+        .statusbarpanel-progress-bar {
+            height: 100% !important;
+            width: 43px !important;
+            background-image: linear-gradient(to right, -moz-Dialog, ThreeDShadow) !important;
+            visibility: hidden !important;
+        }
+
+        &[busy="true"] {
+            .statusbarpanel-progress-bar {
+                animation: progress-bar-slide 2s steps(15) infinite !important; 
+                visibility: visible !important;
+            }
+
+            &[flipped="true"] {
+                .statusbarpanel-progress-container {
+                    transform: scaleX(-1) !important;
+                }
+            }
+        }
+    }
+    
+    #offline-status {
+        list-style-image: url("chrome://collabra/content/images/statusbar/online.png");
+
+        &[offline] {
+            list-style-image: url("chrome://collabra/content/images/statusbar/offline.png");
+        }
+    }
+
+    #security-button {
+        list-style-image: url("chrome://collabra/content/images/statusbar/lock-insecure.png");
+
+        &[level="high"] {
+            list-style-image: url("chrome://collabra/content/images/statusbar/lock-secure.png");
+        }
+    }
+}
+
+@keyframes progress-bar-slide {
+    from {
+        transform: translateX(-43px);
+    }
+    to {
+        transform: translateX(43px);
+    }
+}

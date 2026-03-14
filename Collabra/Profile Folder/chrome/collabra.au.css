@@ -1,0 +1,168 @@
+menupopup {
+  background: -moz-Dialog !important;
+  box-shadow: inset -1px -1px 0 ThreeDDarkShadow, inset 1px 1px 0 ThreeDLightShadow, inset -2px -2px 0 ThreeDShadow, inset 2px 2px 0 ThreeDHighlight !important;
+  margin: 0 !important;
+}
+menupopup::part(content) {
+  margin: 0 !important;
+  background: transparent !important;
+  color: MenuText !important;
+  padding: 1px !important;
+  border: 2px solid transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+menupopup > menu > menupopup {
+  margin-top: -3px !important;
+  margin-left: -3px !important;
+}
+
+menuseparator {
+  padding: 0 !important;
+  border-block-start: 1px solid ThreeDShadow !important;
+  border-block-end: 1px solid ThreeDHighlight !important;
+  margin-inline: 1px !important;
+  margin-block-start: 3px !important;
+  margin-block-end: 4px !important;
+}
+menuseparator::before {
+  display: none !important;
+}
+
+menu,
+menuitem,
+menucaption {
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+menu[disabled=true],
+menuitem[disabled=true] {
+  color: ThreeDShadow !important;
+  text-shadow: 1px 1px 0 ThreeDHighlight !important;
+  opacity: 1 !important;
+}
+menu[_moz-menuactive]:not([disabled=true]),
+menuitem[_moz-menuactive]:not([disabled=true]) {
+  color: HighlightText !important;
+  background-color: Highlight !important;
+}
+menu[_moz-menuactive][disabled=true],
+menuitem[_moz-menuactive][disabled=true] {
+  color: ThreeDShadow !important;
+  background-color: Highlight !important;
+  text-shadow: none !important;
+}
+
+menupopup > menu::after {
+  width: 4px !important;
+  height: 7px !important;
+  background-image: url("chrome://collabra/content/images/glyphs/arrow-right.svg") !important;
+  background-size: 100% 100% !important;
+  margin-inline: 0 6px !important;
+  margin-block-end: 2px !important;
+}
+
+.menu-text, .menu-iconic-text {
+  margin-inline-start: 2px !important;
+  padding-inline-end: 2px;
+}
+.menu-text::before, .menu-iconic-text::before {
+  overflow: visible !important;
+}
+
+menuitem:not(.menuitem-iconic, [image], [type]) > .menu-text,
+menu:not(.menu-iconic, [image], [type]) > .menu-text {
+  padding-inline-start: 19px !important;
+}
+menuitem:not(.menuitem-iconic, [image], [type]) > .menu-icon,
+menu:not(.menu-iconic, [image], [type]) > .menu-icon {
+  display: none !important;
+}
+
+.menu-text {
+  padding-block-start: 2px !important;
+  padding-block-end: 3px !important;
+}
+
+.menu-accel, .menu-iconic-accel {
+  color: inherit !important;
+  text-shadow: inherit !important;
+  margin-inline: 0.74em 1.35em !important;
+  padding-block-end: 3px !important;
+}
+
+:is(menuitem):not([acceltext]) > .menu-accel {
+  display: flex !important;
+  margin-inline: 0.74em 0.35em !important;
+}
+
+.menu-icon {
+  margin: 0 !important;
+  margin-inline: 2px !important;
+}
+:is(menuitem)[checked=true] > .menu-icon {
+  list-style-image: url("chrome://collabra/content/images/glyphs/checkmark.svg") !important;
+}
+
+menubar > menu {
+  color: MenuText !important;
+  border: 0 !important;
+  padding-block: 3px !important;
+  padding-inline: 6px !important;
+  background-color: -moz-Dialog !important;
+}
+menubar > menu:-moz-window-inactive {
+  color: ThreeDShadow !important;
+}
+menubar > menu[disabled=true] {
+  color: ThreeDShadow !important;
+  text-shadow: 1px 1px 0 ThreeDHighlight !important;
+}
+menubar > menu[_moz-menuactive=true]:not([disabled=true]) {
+  background-color: inherit !important;
+  color: inherit !important;
+  box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px 0 ThreeDHighlight !important;
+}
+menubar > menu[_moz-menuactive=true]:not([disabled=true]):-moz-window-inactive {
+  color: ThreeDShadow !important;
+}
+menubar > menu[_moz-menuactive=true]:not([disabled=true])[open=true] {
+  box-shadow: inset -1px -1px 0 ThreeDHighlight, inset 1px 1px 0 ThreeDShadow !important;
+  padding-top: 4px !important;
+  padding-bottom: 2px !important;
+  padding-inline-start: 7px !important;
+  padding-inline-end: 5px !important;
+}
+menubar > menu:not(.menu-iconic, [image], [type]) > .menu-text {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#context-navigation {
+  flex-direction: column !important;
+}
+#context-navigation .menuitem-iconic {
+  list-style-image: none !important;
+}
+#context-navigation .menuitem-iconic > .menu-icon {
+  width: 16px !important;
+  height: 16px !important;
+}
+#context-navigation .menuitem-iconic > .menu-text {
+  display: flex !important;
+}
+
+#bookmarksMenu,
+#tools-menu {
+  display: none !important;
+}
+
+tooltip {
+  border-radius: 0 !important;
+}
+
+/*# sourceMappingURL=collabra.au.css.map */

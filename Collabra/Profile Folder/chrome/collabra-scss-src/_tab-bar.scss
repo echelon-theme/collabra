@@ -1,0 +1,176 @@
+:root {
+    --tab-min-height: 25px !important;
+    --tabstrip-min-height: 25px !important;
+    --tab-icon-end-margin: 4px !important;
+}
+
+#TabsToolbar {
+    background-color: -moz-Dialog !important;
+    padding-block-end: 3px !important;
+    border-block-start: 1px solid ThreeDShadow !important;
+
+    .toolbar-items {
+        border-block-start: 1px solid ThreeDDarkShadow !important;
+        padding-block-start: 1px !important;
+        box-shadow: inset 0 -1px 0 ThreeDHighlight, inset 0 -2px 0 ThreeDLightShadow !important;
+
+        #tabbrowser-tabs {
+            border: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    }
+
+    .tabbrowser-tab {
+        padding: 0 !important;
+
+        .tab-background {
+            min-height: 0 !important;
+            border-radius: 0 !important;
+            margin-block: 0 !important;
+            margin-block-start: 2px !important;
+            outline: 0 !important;
+            box-shadow: none !important;
+            background-color: -moz-Dialog !important;
+            box-shadow: inset 0 -1px 0 ThreeDHighlight, inset -1px 0 0 ThreeDDarkShadow, inset 1px 1px 0 ThreeDHighlight, inset -2px 0 0 ThreeDShadow, inset 2px 2px 0 ThreeDLightShadow !important;
+            position: relative !important;
+
+            &:is([selected], [multiselected]) {
+                margin-block-start: 0 !important;
+                box-shadow: inset 1px 0 0 ThreeDHighlight, inset 0 -1px 0 ThreeDFace, inset -1px 0 0 ThreeDDarkShadow, inset 1px 1px 0 ThreeDHighlight, inset -2px 0 ThreeDShadow, inset 2px 2px 0 ThreeDLightShadow !important;
+            }
+
+            &::before,
+            &::after {
+                content: '';
+                display: flex;
+                width: 2px;
+                height: 2px;
+                position: absolute;
+            }
+
+            &::before {
+                box-shadow: inset 1px 1px 0 ThreeDFace !important;
+                background-color: ThreeDHighlight !important;
+                left: 0 !important;
+                top: 0 !important;
+            }
+
+            &::after {
+                box-shadow: inset -1px 1px 0 ThreeDFace !important;
+                background-color: ThreeDDarkShadow !important;
+                right: 0 !important;
+                top: 0 !important;
+            }
+
+            .tab-loading-burst,
+            .tab-context-line {
+                display: none !important;
+            }
+        }
+
+        &:has(+ .tabbrowser-tab[visuallyselected]) {
+            .tab-background {
+                box-shadow: inset 0 -1px 0 ThreeDHighlight, inset 1px 1px 0 ThreeDHighlight, inset 2px 2px 0 ThreeDLightShadow !important;
+
+                &::after {
+                    display: none !important;
+                }
+            }
+        }
+
+        &[visuallyselected] + .tabbrowser-tab {
+            .tab-background {
+                box-shadow: inset 0 -1px 0 ThreeDHighlight, inset -1px 0 0 ThreeDDarkShadow, inset 0 1px 0 ThreeDHighlight, inset -2px 0 0 ThreeDShadow, inset 0 2px 0 ThreeDLightShadow !important;
+
+                &::before {
+                    display: none !important;
+                }
+            }
+        }
+
+        .tab-content {
+            padding: 0 6px !important;
+            padding-block-start: 2px !important;
+
+            &[selected] {
+                padding: 0 8px !important;
+                padding-block-start: 0 !important;
+            }
+
+            .tab-label-container {
+                mask-image: none !important;
+                height: unset !important;
+
+                .tab-label {
+                    width: 100% !important;
+                    text-overflow: ellipsis !important;
+                    overflow: hidden;
+                }
+            }
+
+            .tab-close-button {
+                display: none !important;
+            }
+        }
+    }
+
+    #tabs-newtab-button,
+    #new-tab-button {
+        --toolbarbutton-min-width: 32px !important;
+        --toolbarbutton-icon-small-width: 22px !important;
+        --toolbarbutton-icon-small-height: 17px !important;
+        list-style-image: url("chrome://collabra/content/images/tabbar/tab-new.png") !important;
+
+        .toolbarbutton-text {
+            display: none !important;
+        }
+    }
+}
+
+#tabbrowser-tabbox {
+    box-shadow: none !important;
+    outline: 0 !important;
+}
+
+.tabs-closebutton {
+    padding: 5px !important;
+    list-style-image: url("chrome://collabra/content/images/glyphs/close.svg") !important;
+    border: 1px solid transparent !important;
+    border-radius: 0 !important;
+    background-color: -moz-Dialog !important;
+    color: ButtonText !important;
+    margin-inline: 3px !important;
+
+    &:not([disabled="true"]) {
+        &:hover {
+            border-color: #000 !important;
+            box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px 0 ThreeDHighlight !important;
+
+            &:active {
+                box-shadow: inset 1px 1px 0 ThreeDShadow, inset -1px -1px 0 ThreeDHighlight !important;
+            }
+        }
+    }
+
+    .toolbarbutton-icon {
+        width: 8px !important;
+        height: 7px !important;
+    }
+}
+
+#alltabs-button {
+    --toolbarbutton-icon-small-width: 7px !important;
+    --toolbarbutton-icon-small-height: 8px !important;
+    --toolbarbutton-min-width: 0 !important;
+    width: 20px !important;
+    max-height: 19px !important;
+    list-style-image: url("chrome://collabra/content/images/glyphs/arrow.svg") !important;
+    fill: ButtonText !important;
+    padding: 0 !important;
+    align-self: center;
+
+    .toolbarbutton-text {
+        display: none !important;
+    }
+}
