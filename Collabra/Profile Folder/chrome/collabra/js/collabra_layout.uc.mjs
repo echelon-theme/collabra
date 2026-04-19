@@ -229,10 +229,6 @@ var g_CollabraLayout;
                 }
             });
 
-            if (document.getElementById("titlebar")) {
-                document.getElementById("titlebar").remove();
-            }
-
             window.addEventListener(
                 "customizationstarting",
                 this.customizeModeManager
