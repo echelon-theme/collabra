@@ -1,6 +1,8 @@
 :root {
-    background-color: -moz-Dialog !important;
-    color: -moz-DialogText !important;
+    &#main-window {
+        background-color: -moz-Dialog !important;
+        color: -moz-DialogText !important;
+    }
 
     #navigator-toolbox {
         background-color: inherit !important;

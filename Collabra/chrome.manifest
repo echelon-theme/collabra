@@ -1,0 +1,8 @@
+content         userchrome                      ./
+
+content         userscripts                     collabra/collabra/js/
+content         modules                         collabra/collabra/js/modules/
+
+locale          collabra        en-US           collabra/locale/en-US/
+
+content         collabra                        collabra/collabra/ contentaccessible=yes

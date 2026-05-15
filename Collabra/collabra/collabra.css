@@ -1,4 +1,4 @@
-:root {
+:root#main-window {
   background-color: -moz-Dialog !important;
   color: -moz-DialogText !important;
 }
@@ -842,6 +842,7 @@ dropmarker {
   box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px 0 ThreeDHighlight !important;
 }
 #status-bar #component-bar .taskbutton {
+  appearance: none !important;
   width: 33px !important;
   height: 100% !important;
   padding: 0 !important;

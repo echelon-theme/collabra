@@ -22,7 +22,8 @@
         box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px 0 ThreeDHighlight !important;
 
         .taskbutton {
-            width: 33px !important; 
+            appearance: none !important;
+            width: 33px !important;
             height: 100% !important;
             padding: 0 !important;
             border: 1px solid transparent !important;

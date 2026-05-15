@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+    <Description about="urn:mozilla:install-manifest">
+        <em:id>{a150c540-5010-11f1-b4ac-0800200c9a66}</em:id>
+        <em:version>1.0</em:version>
+
+        <!-- Target Application this theme can install into,
+        with minimum and maximum supported versions. -->
+        <em:targetApplication>
+            <Description>
+                <em:minVersion>140.0</em:minVersion>
+                <em:maxVersion>140.*</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+
+        <!-- Front End MetaData -->
+        <em:name>Collabra</em:name>
+        <em:description>Netscape 4 theme for Firefox 140 ESR.</em:description>
+        <em:creator>travy-patty</em:creator>
+        <em:homepageURL>https://github.com/echelon-theme/collabra</em:homepageURL>
+
+        <em:internalName>collabra</em:internalName>
+    </Description>
+
+</RDF>

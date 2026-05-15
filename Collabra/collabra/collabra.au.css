@@ -57,13 +57,15 @@ menuitem[_moz-menuactive][disabled=true] {
   text-shadow: none !important;
 }
 
-menupopup > menu::after {
+.menu-right {
   width: 4px !important;
   height: 7px !important;
-  background-image: url("chrome://collabra/content/images/glyphs/arrow-right.svg") !important;
-  background-size: 100% 100% !important;
+  list-style-image: url("chrome://collabra/content/images/glyphs/arrow-right.svg") !important;
   margin-inline: 0 6px !important;
   margin-block-end: 2px !important;
+}
+.menu-right image {
+  width: 4px !important;
 }
 
 .menu-text, .menu-iconic-text {
@@ -108,7 +110,14 @@ menu:not(.menu-iconic, [image], [type]) > .menu-icon {
   list-style-image: url("chrome://collabra/content/images/glyphs/checkmark.svg") !important;
 }
 
+menuitem[checked=true] > .menu-iconic-left {
+  margin-inline: 2px !important;
+  width: unset !important;
+  list-style-image: url("chrome://collabra/content/images/glyphs/checkmark.svg") !important;
+}
+
 menubar > menu {
+  appearance: none !important;
   color: MenuText !important;
   border: 0 !important;
   padding-block: 3px !important;
@@ -123,7 +132,7 @@ menubar > menu[disabled=true] {
   text-shadow: 1px 1px 0 ThreeDHighlight !important;
 }
 menubar > menu[_moz-menuactive=true]:not([disabled=true]) {
-  background-color: inherit !important;
+  background-color: -moz-Dialog !important;
   color: inherit !important;
   box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px 0 ThreeDHighlight !important;
 }
@@ -137,7 +146,8 @@ menubar > menu[_moz-menuactive=true]:not([disabled=true])[open=true] {
   padding-inline-start: 7px !important;
   padding-inline-end: 5px !important;
 }
-menubar > menu:not(.menu-iconic, [image], [type]) > .menu-text {
+menubar > menu:not(.menu-iconic, [image], [type]) > .menu-text,
+menubar > menu .menubar-text {
   padding: 0 !important;
   margin: 0 !important;
 }

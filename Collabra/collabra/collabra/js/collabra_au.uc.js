@@ -9,7 +9,7 @@
 (function () {
   // Store and preload the author style sheet
   const sss = Cc['@mozilla.org/content/style-sheet-service;1'].getService(Ci.nsIStyleSheetService);
-  const sheet = sss.preloadSheet(makeURI("chrome://userChrome/content/userChrome.au.css"), sss.AUTHOR_SHEET);
+  const sheet = sss.preloadSheet(makeURI("chrome://userChrome/content/collabra/userChrome.au.css"), sss.AUTHOR_SHEET);
   // Inject the preloaded style sheet to current window
   try{
     window.windowUtils.addSheet(sheet,Ci.nsIDOMWindowUtils.AUTHOR_SHEET);
