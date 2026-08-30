@@ -48,7 +48,17 @@ var g_CollabraLayout;
         }
 
         get toolbarStates() {
-			return JSON.parse(Services.prefs.getCharPref("collabra.toolbar.states"));
+            try {
+			    return JSON.parse(Services.prefs.getCharPref("collabra.toolbar.states"));
+            }
+            catch (e) {
+                // If the preference doesn't exist (or any other error occurs
+                // during retrieval), then we'll just return an empty array
+                // rather than having the exception bubble up. This getter is
+                // accessed in writeGrippyState(), which caused it to crash
+                // before it even gets to setToolbarStates().
+                return [];
+            }
 		}
 
         setToolbarStates(states) {
@@ -124,7 +134,16 @@ var g_CollabraLayout;
             var toolbar = document.getElementById(idString);
 
             toolbar.setAttribute("collabra_collapsed", "false");
-            this.writeGrippyState(toolbar, false);
+
+            try {
+                this.writeGrippyState(toolbar, false);
+            }
+            catch (e) {
+                // We handle this as non-fatal so the GUI can clean up even when
+                // writing the grippy state to preferences fails. That way, the
+                // collapsed grippy elements don't stick around and accumulate.
+                console.error("Error when writing toolbar grippy state:", e);
+            }
 
             var collapsedTray = document.querySelector(".collapsed-tray-holder .collapsed-tray");
             var collapsedToolbar = document.getElementById("moz_tb_collapsed_" + toolbar.id);
@@ -154,7 +173,10 @@ var g_CollabraLayout;
 
                 document.querySelector(".collapsed-tray-holder .collapsed-tray").appendChild(collapsedGrippy);
 
-                collapsedGrippy = document.getElementById("moz_tb_collapsed_" + aToolbar.id);
+                var temp;
+                if (collapsedGrippy != (temp = document.getElementById("moz_tb_collapsed_" + aToolbar.id))) {
+                    console.error("Collapsed grippy element mismatch.", collapsedGrippy, temp);
+                }
             }
         }
 
